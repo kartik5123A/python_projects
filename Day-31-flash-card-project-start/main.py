@@ -37,6 +37,9 @@ def delete_card():
     french_words.remove(french_words[random_number])
     english_words.remove(english_words[random_number])
     total_words = len(french_words) - 1
+    if total_words < 0:
+        tkinter.messagebox.showinfo(message = "Congrats!! You have mastered this flip game.🎉🎉🎉")
+        window.destroy()    
 
 # -------------------------- UI DESIGN --------------------------------------- #
 window = tkinter.Tk()
